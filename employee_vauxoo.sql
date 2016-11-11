@@ -19,6 +19,9 @@ CREATE TABLE employee_department (
 -- adding the foreign key to relate employee with his/her department
 ALTER TABLE employee ADD COLUMN id_employee_department INTEGER NOT NULL REFERENCES employee_department;
 
+-- adding boss, a boss is an employee too so no need for other table.
+ALTER TABLE employee ADD COLUMN boss_id INTEGER REFERENCES employee;
+
 
 CREATE TABLE employee_hobby (
 	id SERIAL NOT NULL PRIMARY KEY,
