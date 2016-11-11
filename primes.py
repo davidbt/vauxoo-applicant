@@ -1,16 +1,20 @@
 """
-Your module documentation here
+A module that just implements PrimeClass class.
 """
 
 
 class PrimeClass(object):
     """
-    Your class documentation here
+    Just one method (is_prime).
     """
 
     def is_prime(self, num_int):
         """
-        Your method documentation here
+        Returns True if arg @num_int is a prime number.
         """
-        # your primes code here
-        return "not implement yet"  # Remove this dummy line
+        if num_int < 2:
+            return False
+        for i in xrange(2, num_int):
+            if num_int % i == 0:
+                return False
+        return True
