@@ -30,11 +30,12 @@ CREATE TABLE employee_hobby (
 );
 
 CREATE TABLE employee__employee_hobby (
-	id SERIAL NOT NULL PRIMARY KEY,
 	employee_id INTEGER NOT NULL REFERENCES employee,
 	employee_hobby_id INTEGER NOT NULL REFERENCES employee_hobby,
-	UNIQUE (employee_id, employee_hobby_id)
+	PRIMARY KEY (employee_id, employee_hobby_id)
 );
+
+
 
 INSERT INTO employee_department (name, description) values ('IT', 'The best one.');
 INSERT INTO employee_department (name, description) values ('Sales', '...');
