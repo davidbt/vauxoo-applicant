@@ -13,8 +13,8 @@ class CalculatorClass(object):
         Returns the sum of arg @num_list
         """
         res = 0
-        for x in num_list:
-            res += x
+        for num in num_list:
+            res += num
         # it could be just: return sum(num_list) but I guess you don't
         # want me to use that method.
         return res
